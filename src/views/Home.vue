@@ -1,16 +1,7 @@
 <template>
   <Header />
   <Block />
-  <section class="picture">
-    <div class="container">
-      <p class="picture__text">
-        Многие не верят предсказаниям и мы решили доказать каждому, 
-        <span class="color">
-          что прогноз может изменить жизнь любого человека!
-        </span>
-      </p>
-    </div>
-  </section>
+  <Picture />
 
   <section class="question">
     <div class="container">
@@ -49,11 +40,12 @@
 <script>
 import Header from '@/components/Header.vue'
 import Block from '@/components/Block.vue'
+import Picture from '@/components/Picture.vue'
 
 export default {
   name: 'Home',
   components: {
-    Header, Block
+    Header, Block, Picture
   }
 }
 </script>

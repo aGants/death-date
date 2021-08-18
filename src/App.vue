@@ -5,7 +5,7 @@
 <style>
 
 :root {
-  --bgcolor: #262628;
+  --bgcolor: #202024;
   --main-color: #ffffff;
   --second-color: #F6C866;
   --sub-color: rgba(255, 255, 255, 0.6);
@@ -70,6 +70,7 @@ body {
 }
 
 .color {
+  display: block;
   color: var(--second-color)
 }
 

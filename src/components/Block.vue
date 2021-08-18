@@ -32,7 +32,6 @@ export default {
     border: 1px solid var(--main-color);
   }
   .block-text__bold {
-    display: block;
     font-weight: 500;
   } 
   .block-text__img{

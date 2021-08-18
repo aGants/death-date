@@ -14,7 +14,7 @@
       </div>
       
       <p class="header-text color btext">Вас беспокоит вопрос о том, 
-        <span class="header-text__up">
+        <span class="header-text__up color">
           когда Вы покинете этот Мир и при каких обстоятельствах?
         </span>
       </p>
