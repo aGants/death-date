@@ -102,7 +102,7 @@ body {
 
   .btext {
     font-size: 25px;
-}
+  }
 }
 
 </style>
