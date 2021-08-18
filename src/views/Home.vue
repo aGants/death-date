@@ -2,19 +2,7 @@
   <Header />
   <Block />
   <Picture />
-
-  <section class="question">
-    <div class="container">
-      <span class="question__title">
-      </span>
-        <button class="btn">Да</button>
-        <button class="btn">Нет</button>
-        <span class="question__subtext">
-
-        </span>
-    </div>
-  </section>
-
+  <Question />
   <section class="end">
     <div class="container">
       <img src="@/assets/rune1.svg" atl="rune">
@@ -41,11 +29,12 @@
 import Header from '@/components/Header.vue'
 import Block from '@/components/Block.vue'
 import Picture from '@/components/Picture.vue'
+import Question from '@/components/Question.vue'
 
 export default {
   name: 'Home',
   components: {
-    Header, Block, Picture
+    Header, Block, Picture, Question
   }
 }
 </script>

@@ -19,6 +19,7 @@ export default {
 
 <style scoped>
   .container{
+    margin-bottom: 53px;
     background: linear-gradient(to right, rgba(32, 32, 36, 0.8), rgba(32, 32, 36, 0.8)),
       url('../assets/bg.jpg');
     background-repeat: no-repeat;
@@ -29,7 +30,6 @@ export default {
     width: 219px;
     height: 149px;
     padding: 102px 0 80px;
-    margin-bottom: 53px;
   }
   @media (min-width: 769px) {
     .container {

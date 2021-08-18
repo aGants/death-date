@@ -50,6 +50,7 @@ body {
   font: 300 14px 'Roboto', sans-serif;
   color: var(--main-color);
   overflow: hidden;
+  cursor: pointer;
 }
 
 .btn:before{
@@ -92,6 +93,7 @@ body {
   }
 
   .btn {
+    display: block;
     width: 310px;
     padding: 23px 0;
     margin-bottom: 34px;
