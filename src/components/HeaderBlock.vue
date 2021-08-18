@@ -18,16 +18,24 @@
           когда Вы покинете этот Мир и при каких обстоятельствах?
         </span>
       </p>
-      <button class="btn">Да</button>
-      <button class="btn">Нет</button>
+      <Button-link url="/">
+        Да
+      </Button-link>
+      <Button-link url="/">
+        Нет
+      </Button-link>
       <span class="header__downtext subtext">Онлайн предсказание</span>
     </div>
   </header>
 </template>
 
 <script>
+
+import ButtonLink from '@/components/ButtonLink.vue'
+
 export default {
-  name: 'Header'
+  name: 'HeaderBlock',
+  components: { ButtonLink }
 }
 </script>
 

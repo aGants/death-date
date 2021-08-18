@@ -4,8 +4,12 @@
       <span class="question__title color btext"> 
         Боитесь ли вы умереть? 
       </span>
-        <button class="btn">Да</button>
-        <button class="btn">Нет</button>
+      <Button-link url="/">
+        Да
+      </Button-link>
+      <Button-link url="/">
+        Нет
+      </Button-link>
       <span class="question__subtext">
         Вопрос 1-5
       </span>
@@ -14,12 +18,15 @@
 </template>
 
 <script>
-export default {
+import ButtonLink from '@/components/ButtonLink.vue'
 
+export default {
+  name: 'QuestionBlock',
+  components: { ButtonLink }
 }
 </script>
 
-<style>
+<style scoped>
   .question__title {
     margin-bottom: 27px;
     text-transform: uppercase;

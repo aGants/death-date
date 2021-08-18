@@ -1,10 +1,10 @@
 <template>
-  <section class="block">
+  <section class="second">
     <div class="container">
-        <p class="block-text btext">
-        <img class="block-text__img" src="@/assets/hands.png">
+        <p class="second-text btext">
+        <img class="second-text__img" src="@/assets/hands.png">
         Позвольте нам раскрыть эту волнующую тайну и 
-          <span class="block-text__bold color">
+          <span class="second-text__bold color">
             с точностью определить дату и время вашей смерти, 
           </span>
             а также предшествующую этому событию причину
@@ -16,25 +16,25 @@
 <script>
 
 export default {
-  name: 'Block',
+  name: 'SecondBlock',
 }
 </script>
 
 <style scoped>
-  .block {
+  .second {
     margin: 78px 0 40px;
   }
-  .block-text {
+  .second-text {
     position: relative;
     box-sizing: border-box;
     width: 255px;
     padding: 58px 19px 21px;
     border: 1px solid var(--main-color);
   }
-  .block-text__bold {
+  .second-text__bold {
     font-weight: 500;
   } 
-  .block-text__img{
+  .second-text__img{
     position: absolute;
     width: 78px;
     margin: auto;
@@ -44,14 +44,14 @@ export default {
   }
 
   @media (min-width: 769px) {
-    .block {
+    .second {
       margin: 140px 0 70px;
     }
-    .block-text {
+    .second-text {
       width: 442px;
       padding: 128px 32px 84px;
     }
-    .block-text__img {
+    .second-text__img {
       width: 135px;
     }
   }

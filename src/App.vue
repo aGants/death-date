@@ -38,45 +38,6 @@ body {
   margin: 0 auto;
 }
 
-.btn {
-  position: relative;
-  width: 180px;
-  padding: 11px 0;
-  margin-bottom: 20px;
-  background: linear-gradient(to right,#F6C866, #FEAD35);
-  border: none;
-  border-radius: 50px;
-  font: 300 14px 'Roboto', sans-serif;
-  color: var(--main-color);
-  overflow: hidden;
-  cursor: pointer;
-  transition: .7s ease-out;
-}
-
-.btn:hover {
-  box-shadow: 0 2px 15px 0 #FEAD35;
-}
-
-.btn:active, .btn:focus {
-  box-shadow: 0 2px 30px 0 #FEAD35;
-}
-
-.btn:before{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 45px;
-  height: 100%;
-  content: '';
-  background: rgba(255, 255, 255, 0.2);
-  filter: blur(13px);
-  animation: shine 1.5s infinite;
-}
-
-@keyframes shine {
- from { transform: translate(0px)skewX(45deg); }
- to { transform: translate(300px)skewX(45deg); }
-}
 
 .color {
   display: block;
@@ -98,14 +59,6 @@ body {
 
   .container {
     max-width: 1440px;
-  }
-
-  .btn {
-    display: block;
-    width: 310px;
-    padding: 23px 0;
-    margin-bottom: 34px;
-    font: 300 20px 'Roboto', sans-serif;
   }
 
   .btext {
