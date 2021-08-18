@@ -20,9 +20,6 @@ export default {
 </script>
 
 <style>
-  .question {
-    margin-bottom: 60px;
-  }
   .question__title {
     margin-bottom: 27px;
     text-transform: uppercase;
@@ -32,9 +29,6 @@ export default {
   }
 
   @media (min-width: 769px) {
-    .question {
-      margin-bottom: 105px;
-    }
     .question__title {
       margin-bottom: 45px;
       text-transform: uppercase;
