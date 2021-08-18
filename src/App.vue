@@ -3,24 +3,62 @@
 </template>
 
 <style>
+
+:root {
+  --bgcolor: #262628;
+  --main-color: #ffffff;
+  --second-color: #F6C866;
+  --sub-color: rgba(255, 255, 255, 0.6);
+  --footer-color: #9D9D9D;
+  --q-text: rgba(255, 255, 255, 1);
+  --svg-color: rgba(255, 255, 255, 0,2);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bgcolor);
+  color: var(--main-color)
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font: 16px 'Roboto';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  padding: 21px 29px;
 }
 
-#nav {
-  padding: 30px;
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+@media (min-width: 769px) {
+  #app {
+    padding: 30px 0;
+  }
+
+  .container {
+    width: 100%;
+  }
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.btn {
+  
 }
+
+.color {
+  color: var(--second-color)
+}
+
+.subtext {
+  color: var(--sub-color)
+}
+
+
 </style>

@@ -1,8 +1,8 @@
 <template>
   <header class="header">
     <div class="container">
-      <p class="header__subtitle">Лучшие астрологи и экстрасенсы Румынии</p>
-      <span class="header__title">Точность прогноза: 97%</span>
+      <p class="header__subtitle subtext">Лучшие астрологи и экстрасенсы Румынии</p>
+      <span class="header__title subtext">Точность прогноза: 97%</span>
       
       <img src="@/assets/woman.png" class="header__img">
       
@@ -13,7 +13,7 @@
       </p>
       <button class="btn">Да</button>
       <button class="btn">Нет</button>
-      <span class="header__downtext">Онлайн предсказание</span>
+      <span class="header__downtext subtext">Онлайн предсказание</span>
     </div>
   </header>
 
@@ -87,15 +87,5 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>
