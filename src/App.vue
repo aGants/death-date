@@ -14,7 +14,6 @@
   --svg-color: rgba(255, 255, 255, 0.2);
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +25,7 @@ body {
 }
 
 #app {
-  font: 300 12px 'Roboto', sans-serif;
+  font: 300 12px/25px 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -43,12 +42,13 @@ body {
 .btn {
   position: relative;
   width: 180px;
-  padding: 19px 0;
-  color: var(--main-color);
+  padding: 11px 0;
+  margin-bottom: 20px;
   background: linear-gradient(to right,#F6C866, #FEAD35);
   border: none;
   border-radius: 50px;
   font: 300 14px 'Roboto', sans-serif;
+  color: var(--main-color);
   overflow: hidden;
 }
 
@@ -79,7 +79,7 @@ body {
 
 @media (min-width: 769px) {
   #app {
-    font: 16px 'Roboto';
+    font: 300 16px 'Roboto';
   }
 
   .container {
@@ -89,10 +89,9 @@ body {
   .btn {
     width: 310px;
     padding: 23px 0;
+    margin-bottom: 34px;
     font: 300 20px 'Roboto', sans-serif;
   }
-
 }
-
 
 </style>
