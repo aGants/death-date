@@ -11,7 +11,7 @@
   --sub-color: rgba(255, 255, 255, 0.6);
   --footer-color: #9D9D9D;
   --q-text: rgba(255, 255, 255, 1);
-  --svg-color: rgba(255, 255, 255, 0,2);
+  --svg-color: rgba(255, 255, 255, 0.2);
 }
 
 
@@ -26,37 +26,29 @@ body {
 }
 
 #app {
-  font: 16px 'Roboto';
+  font: 300 12px 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  padding: 21px 29px;
 }
 
 .container {
-  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   margin: 0 auto;
-}
-
-@media (min-width: 769px) {
-  #app {
-    padding: 30px 0;
-  }
-
-  .container {
-    width: 100%;
-  }
 }
 
 .btn {
   position: relative;
-  width: 310px;
-  padding: 23px 0;
+  width: 180px;
+  padding: 19px 0;
   color: var(--main-color);
   background: linear-gradient(to right,#F6C866, #FEAD35);
   border: none;
   border-radius: 50px;
-  font-size: 20px;
+  font: 300 14px 'Roboto', sans-serif;
   overflow: hidden;
 }
 
@@ -83,6 +75,23 @@ body {
 
 .subtext {
   color: var(--sub-color)
+}
+
+@media (min-width: 769px) {
+  #app {
+    font: 16px 'Roboto';
+  }
+
+  .container {
+    max-width: 1440px;
+  }
+
+  .btn {
+    width: 310px;
+    padding: 23px 0;
+    font: 300 20px 'Roboto', sans-serif;
+  }
+
 }
 
 
