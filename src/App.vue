@@ -77,9 +77,13 @@ body {
   color: var(--sub-color)
 }
 
+.btext {
+  font-size: 16px;
+}
+
 @media (min-width: 769px) {
   #app {
-    font: 300 16px 'Roboto';
+    font: 300 16px/35px 'Roboto';
   }
 
   .container {
@@ -92,6 +96,10 @@ body {
     margin-bottom: 34px;
     font: 300 20px 'Roboto', sans-serif;
   }
+
+  .btext {
+    font-size: 25px;
+}
 }
 
 </style>

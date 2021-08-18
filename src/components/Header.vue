@@ -9,7 +9,7 @@
         <img src="@/assets/vector.svg">
       </div>
       
-      <p class="header-text color">Вас беспокоит вопрос о том, 
+      <p class="header-text color btext">Вас беспокоит вопрос о том, 
         <span class="header-text__up">
           когда Вы покинете этот Мир и при каких обстоятельствах?
         </span>
@@ -64,7 +64,6 @@ export default {
 .header-text {
   width: 270px;
   margin-bottom: 23px;
-  font-size: 16px;
   font-weight: 400;
 }
 
@@ -93,7 +92,6 @@ export default {
   .header-text {
     width: 500px;
     margin-bottom: 60px;
-    font-size: 25px;
   }
 }
 
