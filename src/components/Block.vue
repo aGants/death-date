@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
   .block {
-    margin-bottom: 40px;
+    margin: 78px 0 40px;
   }
   .block-text {
     position: relative;
@@ -46,7 +46,7 @@ export default {
 
   @media (min-width: 769px) {
     .block {
-      margin-bottom: 70px;
+      margin: 140px 0 70px;
     }
     .block-text {
       width: 442px;

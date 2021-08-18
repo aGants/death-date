@@ -1,5 +1,9 @@
 <template>
   <header class="header">
+      <picture class="header-bg">
+        <source media="(min-width:769px)" srcset="@/assets/bbleak.png">
+        <img src="@/assets/bleak.png">
+      </picture>
     <div class="container">
       <p class="header__subtitle subtext">Лучшие астрологи и экстрасенсы Румынии</p>
       <span class="header__title subtext">Точность прогноза: 97%</span>
@@ -29,8 +33,24 @@ export default {
 
 <style scoped>
 .header {
+  position: relative;
   width: 100%;
-  padding: 21px 0 40px;
+  padding-top: 21px;
+}
+
+.header-bg {
+  position: absolute;
+  z-index: -1;
+  margin: auto;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.header-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .header__subtitle {
@@ -73,7 +93,15 @@ export default {
 
 @media (min-width: 769px) {
   .header {
-    padding: 36px 0 70px;
+    padding-top: 36px;
+    height: 100%;
+  }
+  .header-bg {
+    top: -31px;
+    height: 100%;
+  }
+  .header-bg img {
+    object-fit: cover;
   }
   .header__subtitle {
     width: 100%;
