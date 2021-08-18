@@ -49,7 +49,32 @@ body {
 }
 
 .btn {
-  
+  position: relative;
+  width: 310px;
+  padding: 23px 0;
+  color: var(--main-color);
+  background: linear-gradient(to right,#F6C866, #FEAD35);
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.btn:before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 100%;
+  content: '';
+  background: rgba(255, 255, 255, 0.2);
+  filter: blur(13px);
+  animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+ from { transform: translate(0px)skewX(45deg); }
+ to { transform: translate(300px)skewX(45deg); }
 }
 
 .color {
