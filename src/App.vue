@@ -3,7 +3,6 @@
 </template>
 
 <style>
-
 :root {
   --bgcolor: #202024;
   --main-color: #ffffff;
@@ -51,6 +50,15 @@ body {
   color: var(--main-color);
   overflow: hidden;
   cursor: pointer;
+  transition: .7s ease-out;
+}
+
+.btn:hover {
+  box-shadow: 0 2px 15px 0 #FEAD35;
+}
+
+.btn:active, .btn:focus {
+  box-shadow: 0 2px 30px 0 #FEAD35;
 }
 
 .btn:before{

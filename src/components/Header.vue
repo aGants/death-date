@@ -67,13 +67,13 @@ export default {
 
 .header-img {
   position: relative;
-  width: 205px;
+  width: 215px;
 }
 
 .header-img__up {
   position: absolute;
   width: 137px;
-  top: 0; 
+  top: -10px; 
   right: 0;
   bottom: 0; 
   left: 0; 

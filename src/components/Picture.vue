@@ -30,6 +30,7 @@ export default {
     width: 219px;
     height: 149px;
     padding: 102px 0 80px;
+    font-weight: 400;
   }
   @media (min-width: 769px) {
     .container {

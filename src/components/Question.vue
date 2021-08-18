@@ -23,6 +23,7 @@ export default {
   .question__title {
     margin-bottom: 27px;
     text-transform: uppercase;
+    font-weight: 400;
   }
   .question__subtext {
     color: var(--sub-color);
