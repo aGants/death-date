@@ -1,5 +1,5 @@
 <template>
-  <Question-quiz>
+  <Question-quiz v-if="!isLoading" >
       <template v-slot:header>
         Уже совсем скоро Вы узнаете много интересного о своем будущем!
       </template>
@@ -42,15 +42,16 @@
         Вопрос 3-5
       </template>
   </Question-quiz>
+  <Loading-spinner v-else />
 </template>
 
 <script>
 import QuestionQuiz from '@/components/QuestionQuiz.vue'
+import LoadingSpinner from '@/components/LoadingSpinner.vue'
 
 export default {
   name: 'QuestionThree',
-  components: { QuestionQuiz, 
-  },
+  components: { QuestionQuiz, LoadingSpinner },
   data() {
     return {
       date: {
@@ -61,7 +62,8 @@ export default {
       dayError: false,
       monthError: false,
       yearError: false,
-      Disabled: false
+      Disabled: false,
+      isLoading: false
     }
   },
   setup () {
@@ -86,7 +88,10 @@ export default {
         let date = this.date;
         this.$store.commit('ADD_AGE', { day: date.day, month: date.month-1, year: date.year })
         this.yearError = this.monthError = this.dayError = false;
-        this.$router.push("/question/4");
+        this.isLoading = true;
+          setTimeout(() => {
+            this.$router.push("/question/4");
+      }, 2000);
       }
     }
   }

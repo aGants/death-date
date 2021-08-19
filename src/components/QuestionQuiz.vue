@@ -42,14 +42,13 @@ export default {
     position: relative;
   }
   .header {
-    overflow: hidden;
-    box-sizing: border-box;
-    height: 124px;
     display: flex;
     align-items: center;
+    height: 124px;
     font: 400 14px/20px 'Bad Script';
     color: var(--sub-color);
-    border-bottom: 1px solid var(--svg-color);
+    overflow: hidden;
+    border-bottom: 1px solid var(--sub-color);
   }
   .header__text {
     width: 235px;
@@ -57,7 +56,7 @@ export default {
   .header__eye {
     position: absolute;
     transform: rotate(-9.61deg);
-    top: 55%;
+    top: 50%;
     right: -26px;
   }
   .questions {
@@ -89,6 +88,7 @@ export default {
       overflow: visible;
     }
     .header {
+      height: 225px;
       font: 400 25px/35px 'Bad Script';
     }
     .header__text {
@@ -98,8 +98,8 @@ export default {
       height: 77px;
       width: 146px;
       margin: auto;
-      top: 60px;
-      bottom: 0%;
+      top: 0;
+      bottom: 0;
       right: 0;
       left: 500px;
     }
