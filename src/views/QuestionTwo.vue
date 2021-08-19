@@ -7,10 +7,10 @@
         Когда Вы чувствуете себя наиболее комфортно?
       </template>
       <template v-slot:questions>
-        <Button-link :link="'/question/2'">Утро</Button-link>
-        <Button-link :link="'/question/2'">День</Button-link> 
-        <Button-link :link="'/question/2'">Вечер</Button-link> 
-        <Button-link :link="'/question/2'">Ночь</Button-link> 
+        <Button-link :link="'/question/3'">Утро</Button-link>
+        <Button-link :link="'/question/3'">День</Button-link> 
+        <Button-link :link="'/question/3'">Вечер</Button-link> 
+        <Button-link :link="'/question/3'">Ночь</Button-link> 
       </template>
       <template v-slot:number>
         Вопрос 2-5
@@ -23,7 +23,7 @@ import QuestionQuiz from '@/components/QuestionQuiz.vue'
 import ButtonLink from '@/components/ButtonLink.vue'
 
 export default {
-  name: 'QuestionOne',
+  name: 'QuestionTwo',
   components: { QuestionQuiz, 
   ButtonLink 
   }

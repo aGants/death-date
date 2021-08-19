@@ -45,7 +45,10 @@ export default {
   }
   .header {
     overflow: hidden;
-    padding: 21px 0;
+    box-sizing: border-box;
+    height: 124px;
+    display: flex;
+    align-items: center;
     font: 400 14px/20px 'Bad Script';
     color: var(--sub-color);
     border-bottom: 1px solid var(--svg-color);
