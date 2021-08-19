@@ -64,7 +64,7 @@ export default {
 .header__subtitle {
   display: block;
   width: 100vw;
-  border-bottom: 1px solid var(--svg-color);
+  border-bottom: 1px solid var(--sub-color);
   padding-bottom: 11px;
 }
 

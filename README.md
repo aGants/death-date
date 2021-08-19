@@ -12,3 +12,11 @@ npm install
 ```
 npm run serve
 ```
+
+```
+npm run build
+```
+
+```
+serve -s dist
+```

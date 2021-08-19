@@ -34,7 +34,7 @@ const routes = [
   },
   {
     path: '/data',
-    name: 'Vue',
+    name: 'Data',
     component: () => import( '../views/Data.vue')
   }
 ]
