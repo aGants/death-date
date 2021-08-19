@@ -7,7 +7,36 @@
         Укажите свою дату рождения:
       </template>
       <template v-slot:questions>
-        <Button-link :link="'/question/4'">Далее</Button-link> 
+
+        <form @submit.prevent="onClick">
+          <select
+            v-model="day"
+            class="questions-select"
+            :class="{error: dayError}"
+          >
+            <option value="" disabled>День</option>
+            <option v-for="day in days" :key="day">{{ day }}</option>
+          </select>
+          <select
+            v-model="month"
+            class="questions-select"
+            :class="{error: monthError}"
+          >
+            <option value="" disabled>Месяц</option>
+            <option v-for="month in months" :key="month">{{ month }}</option>
+          </select>
+          <select
+            v-model="year"
+            class="questions-select"
+            :class="{error: yearError}"
+          >
+            <option value="" disabled>Год</option>
+            <option v-for="year in years" :key="year">{{ year }}</option>
+          </select>
+
+          <button class="button" onClick> Далее </button> 
+      </form>
+      
       </template>
       <template v-slot:number>
         Вопрос 3-5
@@ -17,12 +46,88 @@
 
 <script>
 import QuestionQuiz from '@/components/QuestionQuiz.vue'
-import ButtonLink from '@/components/ButtonLink.vue'
 
 export default {
   name: 'QuestionThree',
   components: { QuestionQuiz, 
-  ButtonLink 
+  },
+  data() {
+    return {
+      day: '',
+      month: '',
+      year: '',
+      link: "''",
+      dayError: false,
+      monthError: false,
+      yearError: false,
+      Disabled: false
+    }
+  },
+  setup () {
+    let days   = Array.from(Array(31), (v, k) => k+1);
+    let months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь',];
+    let years   = Array.from(Array(101), (v, k) => k+1921).reverse();
+    return {
+      days, months, years
+    }
+  },
+  methods: {
+    onClick() {
+      if (this.day === '') {
+        this.dayError = true;
+      } else if (this.month === '') {
+        this.dayError = false;
+        this.monthError = true;
+      } else if (this.year === '') {
+        this.monthError = this.dayError = false;
+        this.yearError = true;
+      } else {
+        this.yearError = this.monthError = this.dayError = false;
+        this.$router.push("/question/4");
+      }
+    }
   }
 }
 </script>
+
+<style scoped>
+  .questions-select {
+    display: block;
+    width: 180px;
+    padding: 11px 0;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 50px;
+    outline: 0;
+    font: 400 14px 'Roboto', sans-serif;
+    color: var(--bgcolor);
+    cursor: pointer;
+    transition: .7s ease-out;
+    text-decoration: none;
+    text-align: center;
+    text-align-last: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: #CBCBCB url('../assets/arrow.svg') no-repeat left;
+    background-position-x: calc(100% - 10px);
+  }
+
+  .questions-select:active, .questions-select:focus {
+    box-shadow: inset 0px 5px 8px rgb(32 32 36 / 70%);
+  }
+
+  @media (min-width: 769px) {
+    .questions-select {
+      width: 310px;
+      padding: 23px 0;
+      margin-bottom: 34px;
+      font: 400 20px 'Roboto', sans-serif;
+    }
+  }
+
+.error {
+  border: 1px solid var(--error);
+}
+</style>

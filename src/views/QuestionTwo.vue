@@ -24,8 +24,6 @@ import ButtonLink from '@/components/ButtonLink.vue'
 
 export default {
   name: 'QuestionTwo',
-  components: { QuestionQuiz, 
-  ButtonLink 
-  }
+  components: { QuestionQuiz, ButtonLink }
 }
 </script>

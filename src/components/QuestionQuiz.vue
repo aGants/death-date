@@ -15,9 +15,7 @@
       <p class="questions_text color btext">
         <slot name="question"></slot>
       </p>
-      <div>
         <slot name="questions"></slot>
-      </div>
     </div>
   </section>
   <footer class="footer">

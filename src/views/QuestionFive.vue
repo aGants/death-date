@@ -8,7 +8,7 @@
         <Button-link :link="'/question/5'">Затрудняюсь ответить</Button-link> 
       </template>
       <template v-slot:number>
-        Вопрос 4-5
+        Вопрос 5-5
       </template>
   </Question-quiz>
 </template>
@@ -19,8 +19,6 @@ import ButtonLink from '@/components/ButtonLink.vue'
 
 export default {
   name: 'QuestioFive',
-  components: { QuestionQuiz, 
-  ButtonLink 
-  }
+  components: { QuestionQuiz, ButtonLink }
 }
 </script>

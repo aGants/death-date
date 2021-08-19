@@ -10,7 +10,8 @@
   --sub-color: rgba(255, 255, 255, 0.6);
   --footer-color: #9D9D9D;
   --q-text: rgba(255, 255, 255, 1);
-  --svg-color: rgba(255, 255, 255, 0.2);
+  --svg-color: rgba(49, 44, 44, 0.2);
+  --error: #EE5353;
 }
 
 * {

@@ -32,7 +32,7 @@ export default {
     color: var(--main-color);
     overflow: hidden;
     cursor: pointer;
-    transition: .7s ease-out;
+    transition: 0.7s ease-out;
     text-decoration: none;
   }
 
@@ -67,6 +67,6 @@ export default {
       padding: 23px 0;
       margin-bottom: 34px;
       font: 300 20px 'Roboto', sans-serif;
-  }
+    }
   }
 </style>
