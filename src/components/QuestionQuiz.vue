@@ -12,10 +12,10 @@
   </header>
   <section class="questions">
     <div class="container">
-      <p class="questions_text color">
+      <p class="questions_text color btext">
         <slot name="question"></slot>
       </p>
-      <div class="questions__block">
+      <div>
         <slot name="questions"></slot>
       </div>
     </div>
@@ -23,7 +23,7 @@
   <footer class="footer">
     <div class="container">
       <picture class="footer__moon">
-        <source media="(min-width:769px)" srcset="@/assets/bmoon.png">
+        <source media="(min-width:769px)" srcset="@/assets/mmoon.png">
         <img src="@/assets/moon.png">
       </picture>
       <p class="footer__number">
@@ -59,9 +59,30 @@ export default {
     top: 55%;
     right: -26px;
   }
+  .questions {
+    padding-top: 36px;
+  }
+  .questions_text {
+    width: 280px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  .footer {
+    padding: 16px 0 46px;
+  }
+  .footer__moon {
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    bottom: 0;
+  }
   .footer__number {
     color: var(--sub-color);
+    letter-spacing: 0.1em;
   }
+
+
   @media (min-width: 769px) {
     .container {
       overflow: visible;
@@ -81,5 +102,23 @@ export default {
       right: 0;
       left: 500px;
     }
-  } 
-</style>
+    .questions {
+      padding-top: 54px;
+    }
+    .questions_text {
+      width: 500px; 
+      font-weight: 400;
+      margin-bottom: 45px;
+      text-transform: uppercase;
+    }
+    .footer {
+      padding: 149px 0 35px;
+    }
+    .footer__moon {
+      right: 35%;
+      left: 0px;
+      top: -100px;
+      bottom: 0px;
+    } 
+  }
+  </style>

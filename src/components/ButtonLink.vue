@@ -33,6 +33,7 @@ export default {
     overflow: hidden;
     cursor: pointer;
     transition: .7s ease-out;
+    text-decoration: none;
   }
 
   .button:hover {
