@@ -2,8 +2,7 @@
   <router-link 
     class="button"
     tag="button" 
-    to="/"
-    :href="url" 
+    :to="link"
   >
     <slot></slot>
   </router-link>
@@ -12,7 +11,10 @@
 <script>
 
 export default {
-
+  name: 'ButtonLink',
+  props: {
+    link: String
+  }
 }
 </script>
 

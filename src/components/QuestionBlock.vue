@@ -4,10 +4,10 @@
       <span class="question__title color btext"> 
         Боитесь ли вы умереть? 
       </span>
-      <Button-link url="/">
+       <Button-link :link="'/question/2'">
         Да
       </Button-link>
-      <Button-link url="/">
+       <Button-link :link="'/question/2'">
         Нет
       </Button-link>
       <span class="question__subtext">

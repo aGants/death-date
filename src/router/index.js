@@ -8,9 +8,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import( '../views/About.vue')
+    path: '/question/2',
+    name: 'QuestionTwo',
+    component: () => import( '../views/QuestionTwo.vue')
   }
 ]
 
@@ -19,4 +19,4 @@ const router = createRouter({
   routes
 })
 
-export default router
+export default router;
