@@ -10,7 +10,7 @@
 
         <form @submit.prevent="onClick">
           <select
-            v-model="day"
+            v-model="date.day"
             class="questions-select"
             :class="{error: dayError}"
           >
@@ -18,7 +18,7 @@
             <option v-for="day in days" :key="day">{{ day }}</option>
           </select>
           <select
-            v-model="month"
+            v-model="date.month"
             class="questions-select"
             :class="{error: monthError}"
           >
@@ -26,7 +26,7 @@
             <option v-for="month in months" :key="month">{{ month }}</option>
           </select>
           <select
-            v-model="year"
+            v-model="date.year"
             class="questions-select"
             :class="{error: yearError}"
           >
@@ -53,10 +53,11 @@ export default {
   },
   data() {
     return {
-      day: '',
-      month: '',
-      year: '',
-      link: "''",
+      date: {
+        day: '',
+        month: '',
+        year: '',
+      },
       dayError: false,
       monthError: false,
       yearError: false,
@@ -65,23 +66,25 @@ export default {
   },
   setup () {
     let days   = Array.from(Array(31), (v, k) => k+1);
-    let months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь',];
-    let years   = Array.from(Array(101), (v, k) => k+1921).reverse();
+    let months = Array.from(Array(12), (v, k) => k+1); 
+    let years  = Array.from(Array(101), (v, k) => k+1921).reverse();
     return {
       days, months, years
     }
   },
   methods: {
     onClick() {
-      if (this.day === '') {
+      if (this.date.day === '') {
         this.dayError = true;
-      } else if (this.month === '') {
+      } else if (this.date.month === '') {
         this.dayError = false;
         this.monthError = true;
-      } else if (this.year === '') {
+      } else if (this.date.year === '') {
         this.monthError = this.dayError = false;
         this.yearError = true;
       } else {
+        let date = this.date;
+        this.$store.commit('ADD_AGE', { day: date.day, month: date.month-1, year: date.year })
         this.yearError = this.monthError = this.dayError = false;
         this.$router.push("/question/4");
       }
