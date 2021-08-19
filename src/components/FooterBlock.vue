@@ -32,7 +32,7 @@ export default {
   @media (min-width: 769px) {
     .footer__text {
       width: 400px;
-      height: 29px;
+      height: 28px;
       font: 12px/14px 'Roboto';
     }
   }

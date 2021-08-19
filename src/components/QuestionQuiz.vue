@@ -45,7 +45,7 @@ export default {
   .header {
     display: flex;
     align-items: center;
-    height: 125px;
+    height: 120px;
     font: 400 14px/20px 'Bad Script';
     color: var(--sub-color);
     overflow: hidden;
@@ -62,7 +62,7 @@ export default {
   }
 
   .questions {
-    padding-top: 36px;
+    padding-top: 35px;
   }
   .questions_text {
     width: 280px;
@@ -91,7 +91,7 @@ export default {
       overflow: visible;
     }
     .header {
-      height: 225px;
+      height: 220px;
       font: 400 25px/35px 'Bad Script';
     }
     .header__text {
@@ -107,17 +107,17 @@ export default {
       left: 700px;
     }
     .questions {
-      padding-top: 54px;
+      padding-top: 80px;
     }
     .questions_text {
       width: 500px; 
       font-weight: 400;
-      margin-bottom: 45px;
+      margin-bottom: 40px;
       text-transform: uppercase;
     }
     .footer {
-      padding-top: 149px;
-      margin-bottom: 35px;
+      padding-top: 140px;
+      margin-bottom: 0;
     }
     .footer__moon {
       right: 35%;

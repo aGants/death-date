@@ -4,7 +4,7 @@ const today = new Date();
 
 export default createStore({
   state: {
-    age: '18',
+    age: '',
     today: new Date(today.getFullYear(), today.getMonth(), today.getDate())
   },
   mutations: {

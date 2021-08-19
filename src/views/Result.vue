@@ -21,7 +21,7 @@
       <p class="main-calltext">
         Нажмите на кнопку ниже прямо сейчас и наберите наш номер телефона. Прослушайте важную информацию!
       </p>
-      <button class="button">Позвонить и прослушать</button>
+      <Button-link class="button" :link="'/data'">Позвонить и прослушать</Button-link>
     </div>
     <footer-block />
   </main>
@@ -29,6 +29,7 @@
 
 <script>
 import FooterBlock from '@/components/FooterBlock.vue'
+import ButtonLink from '@/components/ButtonLink.vue'
 
 export default {
   name: 'Home',
@@ -37,7 +38,7 @@ export default {
       date: '',
     }
   },
-  components: { FooterBlock },
+  components: { FooterBlock, ButtonLink },
   mounted() {
     const today = new Date();
     let dd = today.getDate()+1;
@@ -53,7 +54,7 @@ export default {
     font: 300 14px/16px 'Roboto';
   }
   .dialog {
-    margin: 30px 0 18px;
+    margin: 30px 0 17px;
     line-height: 18px;
   }
   .dialog-text_important {
@@ -66,7 +67,7 @@ export default {
   .main-block {
     width: 230px;
     padding: 12px 15px;
-    margin: 22px 0 19px;
+    margin: 22px 0 18px;
     border: 1px solid var(--main-color);
     line-height: 25px;
 
@@ -102,6 +103,7 @@ export default {
       width: 480px;
       height: 170px;
       margin: 54px 0 30px;
+      line-height: 35px;
     }
     .main-text {
       width: 420px;
