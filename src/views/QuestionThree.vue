@@ -69,7 +69,7 @@ export default {
   setup () {
     let days   = Array.from(Array(31), (v, k) => k+1);
     let months = Array.from(Array(12), (v, k) => k+1); 
-    let years  = Array.from(Array(101), (v, k) => k+1921).reverse();
+    let years  = Array.from(Array(83), (v, k) => k+1921).reverse();
     return {
       days, months, years
     }

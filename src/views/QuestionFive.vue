@@ -1,21 +1,31 @@
 <template>
   <Record-loading v-if="isLoading"/>
   <Question-quiz v-else>
-      <template v-slot:question>
-        Запись, которую Вы услышите, может шокировать людей с неокрепшей психикой. Вы готовы узнать, что ждет именно Вас?
-      </template>
-      <template v-slot:questions>
-        <button class="button" @click="onClick"> Да </button> 
-        <button class="button" @click="onClick">Затрудняюсь ответить </button> 
-      </template>
-      <template v-slot:number>
-        Вопрос 5-5
-      </template>
+    <template v-slot:dialog v-if="age<=35">
+      По вам скучает очень близкий человек, которого больше нет в мире живых.
+    </template>
+    <template v-slot:dialog v-else-if="age<=45">
+      По вам скучает очень близкий человек, которого больше нет в мире живых. Возможно это дедушка или бабушка.
+    </template>
+    <template v-slot:dialog v-else>
+      По вам скучает очень близкий человек, которого больше нет в мире живых. Возможно это кто-то из Ваших родителей.
+    </template>
+    <template v-slot:question>
+      Запись, которую Вы услышите, может шокировать людей с неокрепшей психикой. Вы готовы узнать, что ждет именно Вас?
+    </template>
+    <template v-slot:questions>
+      <button class="button" @click="onClick"> Да </button> 
+      <button class="button" @click="onClick">Затрудняюсь ответить </button> 
+    </template>
+    <template v-slot:number>
+      Вопрос 5-5
+    </template>
   </Question-quiz>
   
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import QuestionQuiz from '@/components/QuestionQuiz.vue'
 import RecordLoading from '@/components/RecordLoading.vue'
 
@@ -27,6 +37,7 @@ export default {
     }
   },
   components: { QuestionQuiz, RecordLoading },
+  computed: mapState(['age']),
   methods: {
     onClick() {
       this.isLoading = true;

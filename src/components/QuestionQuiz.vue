@@ -8,6 +8,11 @@
       <p class="header__text">
         <slot name="header"></slot>
       </p>
+      <div class="header-dialog">
+        <p class="header-dialog__text">
+          <slot name="dialog"></slot>
+        </p>
+      </div>
     </div>
   </header>
   <section class="questions">
@@ -59,6 +64,35 @@ export default {
     top: 50%;
     right: -26px;
   }
+
+  .header-dialog {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 70px;
+    padding: 11px;
+    background: var(--main-color);
+    border-radius: 5px;
+  }
+  .header-dialog::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 15px solid #fff;
+    position: absolute;
+    bottom: -14px;
+    right: 30px;
+  }
+  .header-dialog__text {
+    font-family: "Bad Script";
+    line-height: 30px;
+    text-align: center;
+    color: #202024;
+  }
   .questions {
     padding-top: 36px;
   }
@@ -101,7 +135,12 @@ export default {
       top: 0;
       bottom: 0;
       right: 0;
-      left: 500px;
+      left: 700px;
+    }
+    .header-dialog {
+      width: 650px;
+      height: 130px;
+      padding: 11px 20px;
     }
     .questions {
       padding-top: 54px;
