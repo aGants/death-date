@@ -49,17 +49,11 @@ export default {
 </script>
 
 <style scoped>
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
   .main {
-    gap: 50px;
     font: 300 14px/16px 'Roboto';
   }
   .dialog {
-    margin: 30px 0;
+    margin: 30px 0 18px;
     line-height: 18px;
   }
   .dialog-text_important {
@@ -71,7 +65,7 @@ export default {
   }
   .main-block {
     width: 230px;
-    padding: 13px 15px;
+    padding: 12px 15px;
     margin: 22px 0 19px;
     border: 1px solid var(--main-color);
     line-height: 25px;

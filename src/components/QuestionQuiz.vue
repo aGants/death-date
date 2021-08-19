@@ -8,11 +8,7 @@
       <p class="header__text">
         <slot name="header"></slot>
       </p>
-      <div class="header-dialog">
-        <p class="header-dialog__text">
-          <slot name="dialog"></slot>
-        </p>
-      </div>
+      <slot name="dialog"></slot>
     </div>
   </header>
   <section class="questions">
@@ -49,7 +45,7 @@ export default {
   .header {
     display: flex;
     align-items: center;
-    height: 124px;
+    height: 125px;
     font: 400 14px/20px 'Bad Script';
     color: var(--sub-color);
     overflow: hidden;
@@ -65,34 +61,6 @@ export default {
     right: -26px;
   }
 
-  .header-dialog {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height: 70px;
-    padding: 11px;
-    background: var(--main-color);
-    border-radius: 5px;
-  }
-  .header-dialog::before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 9px solid transparent;
-    border-right: 9px solid transparent;
-    border-top: 15px solid #fff;
-    position: absolute;
-    bottom: -14px;
-    right: 30px;
-  }
-  .header-dialog__text {
-    font-family: "Bad Script";
-    line-height: 30px;
-    text-align: center;
-    color: #202024;
-  }
   .questions {
     padding-top: 36px;
   }
@@ -103,7 +71,8 @@ export default {
     text-transform: uppercase;
   }
   .footer {
-    padding: 16px 0 46px;
+    padding-top: 16px;
+    margin-bottom: 46px;
   }
   .footer__moon {
     position: absolute;
@@ -117,7 +86,7 @@ export default {
   }
 
 
-  @media (min-width: 769px) {
+  @media (min-width: 426px) {
     .container {
       overflow: visible;
     }
@@ -137,11 +106,6 @@ export default {
       right: 0;
       left: 700px;
     }
-    .header-dialog {
-      width: 650px;
-      height: 130px;
-      padding: 11px 20px;
-    }
     .questions {
       padding-top: 54px;
     }
@@ -152,7 +116,8 @@ export default {
       text-transform: uppercase;
     }
     .footer {
-      padding: 149px 0 35px;
+      padding-top: 149px;
+      margin-bottom: 35px;
     }
     .footer__moon {
       right: 35%;

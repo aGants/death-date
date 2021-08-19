@@ -24,11 +24,11 @@ body {
   color: var(--main-color)
 }
 
-#app {
-  font: 300 12px/25px 'Roboto', sans-serif;
+.app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  font: 300 12px/25px 'Roboto', sans-serif;
 }
 
 .container {
@@ -38,7 +38,6 @@ body {
   width: 100%;
   margin: 0 auto;
 }
-
 
 .color {
   display: block;
@@ -53,17 +52,53 @@ body {
   font-size: 16px;
 }
 
+.dialog {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 70px;
+  padding: 11px;
+  border-radius: 5px;
+  color: var(--bgcolor);
+  background: var(--main-color);
+}
+.dialog::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 15px solid #fff;
+  position: absolute;
+  bottom: -14px;
+  right: 30px;
+}
+.dialog__text {
+  font-family: "Bad Script";
+  line-height: 30px;
+  text-align: center;
+  color: var(--bgcolor);
+}
+
 @media (min-width: 769px) {
-  #app {
+  .app {
     font: 300 16px/35px 'Roboto';
   }
-
+  
   .container {
     max-width: 1440px;
   }
 
   .btext {
     font-size: 25px;
+  }
+  
+  .dialog {
+    width: 650px;
+    height: 130px;
+    padding: 11px 20px;
   }
 }
 

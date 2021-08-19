@@ -4,9 +4,8 @@ const today = new Date();
 
 export default createStore({
   state: {
-    age: '',
-    today: new Date(today.getFullYear(), today.getMonth(), today.getDate()), 
-    tommorow: new Date(today.getFullYear(), today.getMonth(), today.getDate()+1)
+    age: '18',
+    today: new Date(today.getFullYear(), today.getMonth(), today.getDate())
   },
   mutations: {
     ADD_AGE(state, date) {
